@@ -76,6 +76,10 @@ class Song
     self.new_from_filename(filename).save
   end
   
-  
+  def self.find_by_name(name)
+    @@all.detect do |song|
+      song.name == name
+    end
+  end
   
 end
